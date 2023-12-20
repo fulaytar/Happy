@@ -1,0 +1,143 @@
+body {
+        /* display: none; */
+        /* Приховати весь вміст за замовчуванням */
+        background: #333;
+        font-family: "Caveat", sans-serif;
+    }
+
+    #snow {
+        overflow: hidden;
+        position: relative;
+        --size: 1;
+        --fallDuration: 10s;
+        --swayDuration: 0.8s;
+        --fallSlideStrength: 0.5;
+        --slideStrength: 0.5;
+        --position: 0;
+    }
+
+    #snow>div {
+        position: absolute;
+        top: 0;
+        left: calc(var(--position) - 20%);
+        width: calc(var(--size) * 15px);
+        aspect-ratio: 1;
+        background: radial-gradient(white, transparent 66%);
+        animation: var(--fallDuration) snowFall linear forwards;
+    }
+
+    @keyframes snowFall {
+        to {
+            top: 100%;
+            transform: translateX(calc(var(--cWidth) * var(--fallSlideStrength) / 8));
+        }
+    }
+     a {
+            text-decoration: none;
+            cursor: pointer;
+        }
+    
+    ul {
+            list-style: none;
+        }
+    /* Обнулення дефолтних маржинів для заголовків та параграфів */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+    
+        /* Обнулення дефолтних маржинів і лівого падіння для списків */
+        ul,
+        ol {
+            margin: 0;
+            padding-left: 0;
+        }
+    
+        /* Зроблення зображень блочними елементами */
+        img {
+            display: block;
+        }
+    
+        button {
+            cursor: pointer;
+        }
+.first-bar{
+
+    z-index: 99999;
+    height: 70px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+.logo{
+    fill: #A020F0;
+    cursor: pointer;
+    transition: fill 250ms linear;
+
+}
+.logo:hover,.logo:focus{
+    fill: red;
+}
+.navig-list{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 40px;
+}
+.nav-item-text{
+            font-size: 35px;
+            font-weight: 500;
+            line-height: 1.5;
+            /* 150% */
+            letter-spacing: 0.02em;
+}
+.list-item{
+    transition: color 250ms linear;
+}
+.list-item:hover, .list-item:focus{
+    color:red;
+}
+.container{
+    padding: 25px;
+    min-height: 300px;
+    margin: 0 auto;
+    background-color: aliceblue;
+    width: 1000px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+}
+.first-title{
+                font-size: 38px;
+                font-weight: 600;
+                line-height: 1.5;
+                    /* 150% */
+                letter-spacing: 0.02em;
+                transition: color 250ms linear;
+}
+.first-title:hover{
+    color: red;
+}
+.first-title-text{
+font-size: 30px;
+    font-weight: 400;
+    line-height: 1.5;
+    /* 150% */
+    letter-spacing: 0.02em;
+}
+.akcent{
+    color: #A020F0;
+    text-transform: uppercase;
+    padding-left: 25px;
+}
+.abzac{
+    padding-left: 25px;
+}
