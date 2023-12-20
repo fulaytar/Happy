@@ -3,7 +3,7 @@
 #launch.json folder
 .vscode/
 #Cache folder
-.alcache/
+.alcache/js
 #Symbols folder
 .alpackages/
 #Snapshots folder
