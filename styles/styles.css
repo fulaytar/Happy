@@ -1,5 +1,5 @@
 body {
-display: none;
+/* display: none; */
         /* Приховати весь вміст за замовчуванням */
         background: #333;
         font-family: "Caveat", sans-serif;
@@ -68,24 +68,28 @@ display: none;
             cursor: pointer;
         }
 .first-bar{
-
     z-index: 99999;
     height: 70px;
     background-color: aliceblue;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
 }
 .logo{
     fill: #A020F0;
     cursor: pointer;
-    transition: fill 250ms linear;
+    transition: fill 250ms linear,transform 750ms ease-in-out;
 
 }
 .logo:hover,.logo:focus{
     fill: red;
+    transform: rotate(360deg);
+}
+.logo.logo:hover.logo{
+    fill: red;
+    transform: rotate(360deg);
 }
 .navig-list{
     display:flex;
@@ -100,22 +104,44 @@ display: none;
             /* 150% */
             letter-spacing: 0.02em;
 }
-.list-item{
+.nav-item-text{
     transition: color 250ms linear;
+    color: #333;
 }
-.list-item:hover, .list-item:focus{
+.nav-item-text:hover, .nav-item-text:focus{
     color:red;
+    text-decoration:underline;
 }
 .container{
-    padding: 25px;
+    position: relative;
+    padding: 30px;
     min-height: 300px;
     margin: 0 auto;
     background-color: aliceblue;
     width: 1000px;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     border-radius: 20px;
 }
+.photo-x{
+    border-radius: 25px;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    opacity: 0.2;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.photo-x:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+.sapka{
+    position: absolute;
+    left: 0;
+    top:0;
+    transform: translate(-44%,-34%);
+}
 .first-title{
+    padding-left: 15px;
                 font-size: 38px;
                 font-weight: 600;
                 line-height: 1.5;
@@ -127,6 +153,7 @@ display: none;
     color: red;
 }
 .first-title-text{
+    padding-left: 10px;
 font-size: 30px;
     font-weight: 400;
     line-height: 1.5;
