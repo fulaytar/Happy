@@ -130,7 +130,7 @@ display: none;
     opacity: 0.2;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
-.photo-x:hover{
+.photo-x:hover,.photo-x:focus{
     opacity: 1;
     transform: scale(1.1);
 }
@@ -149,7 +149,7 @@ display: none;
                 letter-spacing: 0.02em;
                 transition: color 250ms linear;
 }
-.first-title:hover{
+.first-title:hover,.first-title:focus{
     color: red;
 }
 .first-title-text{
@@ -168,13 +168,44 @@ font-size: 30px;
 .abzac{
     padding-left: 25px;
 }
+.ring{
+    position: absolute;
+    bottom: 7%;
+    right: 10%;
+    transition:transform 500ms ease-in-out ;
+}
+.ring:hover{
+    transform: scale(1.20);
+}
+.footer-bar{
+    z-index: 99999;
+    height: 70px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+.footer-text{
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 1.5;
+    /* 150% */
+    letter-spacing: 0.02em;
+    transition: color 250ms linear;
+    color: #333;
+}
+.footer-text:hover,.footer-text:focus{
+    color: red;
+}
 /* ========Слайдер============== */
 .slider{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
+    margin-bottom: 60px;
 }
 .item{
 height: 500px;
